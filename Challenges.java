@@ -33,9 +33,10 @@ class Main{
     }
     public static void MovieTimeTracker(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("How long is the movie from start to finish?");
+        System.out.println("How long is the movie from start to finish? (in minutes)");
         int[] Duration = new int[2];
 Duration[0] = sc.nextInt();
-System.out.println("What is it's current time?");
+System.out.println("What is it's current time? (in minutes)");
+Duration[1] = sc.nextInt
     }
 }
