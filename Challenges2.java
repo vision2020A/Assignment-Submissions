@@ -3,7 +3,7 @@ import java.io.*;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        compressString(sc.nextLine());
+        isPalindrome(sc.nextLine());
     }
     public static void compressString(String str) {
         int count = 1;
@@ -26,9 +26,14 @@ public class Main {
         compressed+= arr[ext]+""+count;
         System.out.println(compressed);
     }
-    public static void isPalindrome(String str) {
+    public static boolean isPalindrome(String str) {
+        str = wipe(str);
+        for(int i = 0, int o = str.length; 
+    }
+    public static String wipe(String str){
         str = str.trim();
         str = str.toLowerCase();
-
+        str = str.replaceAll("[^a-zA-Z0-9]", "");
+        return str;
     }
 }
