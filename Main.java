@@ -1,7 +1,7 @@
 import java.util.*;
 // Alexander Signore
 // 9-1-26
-class Main{
+public class Main{
     static void main(String [] args){
         pizzaParty();
     }
@@ -47,12 +47,16 @@ class Main{
         int cupcakes = sc.nextInt();
         boxes[0] = (cupcakes/12);
         cupcakes -= (boxes[0]*12);
+        boxes[1] = (cupcakes/5);
+        cupcakes -= (boxes[1]*5);
+        boxes[2] = cupcakes;
+        System.out.println("There are "+boxes[0]+" boxes, "+boxes[1]+"small boxes, and "+boxes[2]+" cupcakes.");
     }
     public static void timer(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Input seconds to convert.");
         int input = sc.nextInt();
-        int[] time = new int[];
+        int[] time = new int[3];
         time[0] = (input/3600);
         input -= (time[0]*3600);
         time[1] = (input/60);

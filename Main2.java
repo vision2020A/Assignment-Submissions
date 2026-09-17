@@ -1,6 +1,6 @@
 import java.util.*;
-import java.io.*;
-public class Main {
+
+public class Main2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         isPalindrome(sc.nextLine());
@@ -28,7 +28,14 @@ public class Main {
     }
     public static boolean isPalindrome(String str) {
         str = wipe(str);
-        for(int i = 0, int o = str.length; 
+        char[] arr = str.toCharArray();
+        int o = str.length()-1;
+        for(int i = 0;i<=o;i++){
+            if(arr[i] != arr[o]){
+                return false;
+            }
+        }
+        return true;
     }
     public static String wipe(String str){
         str = str.trim();
