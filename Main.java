@@ -2,8 +2,8 @@ import java.util.*;
 // Alexander Signore
 // 9-1-26
 public class Main{
-    static void main(String [] args){
-        pizzaParty();
+    public static void main(String [] args){
+
     }
     public static void pizzaParty(){ //Divides pizzas between guests evenly and gives host remainder
         Scanner sc = new Scanner(System.in);
