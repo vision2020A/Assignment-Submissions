@@ -14,6 +14,7 @@ public class Main{
         int slicesG = pizzas/guests;
         int slicesH = pizzas%guests;
         System.out.println("every guest gets "+slicesG+" Slices,\nand the host is left with "+slicesH+" slices.");
+        sc.close();
     }
     public static void converter(){ //calculates cents into their respective coins
         Scanner sc = new Scanner(System.in);
@@ -28,6 +29,7 @@ public class Main{
         value-=(coins[2]*5);
         coins[3]=value;
         System.out.println(coins[0]+" Quarters, "+coins[1]+" Dimes, \n"+coins[2]+" Nickels, and "+coins[3]+" Pennies.");
+        sc.close();
     }
     public static void movieTimeTracker(){ //find minutes until next hour of movie
         Scanner sc = new Scanner(System.in);
@@ -38,9 +40,10 @@ public class Main{
         Duration[1] = sc.nextInt();
         int nextHr = Duration[0]%Duration[1];
         System.out.println("There is "+nextHr+" minutes until the next hour.");
+        sc.close();
     }
     public static void packageOptimized(){ //find large boxes, small boxes, individual, and sales total
-        //large has 12, small has 5, and invidual has 1, they sell for 15, 6, and 2.
+        //large has 12, small has 5, and individual has 1, they sell for 15, 6, and 2.
         Scanner sc = new Scanner(System.in);
         System.out.println("How many cupcakes are there?");
         int[] boxes = new int[3];
@@ -51,6 +54,7 @@ public class Main{
         cupcakes -= (boxes[1]*5);
         boxes[2] = cupcakes;
         System.out.println("There are "+boxes[0]+" boxes, "+boxes[1]+"small boxes, and "+boxes[2]+" cupcakes.");
+        sc.close();
     }
     public static void timer(){
         Scanner sc = new Scanner(System.in);
@@ -63,5 +67,6 @@ public class Main{
         input -= (time[1]*60);
         time[2] = input;
         System.out.println(time[0]+":"+time[1]+":"+time[2]+" is the time.");
+        sc.close();
     }
 }
