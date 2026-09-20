@@ -3,7 +3,6 @@ import java.util.Arrays;
 public class Main2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println(isRotated(sc.next(), sc.next()));
     }
     public static String compressString(String str) {
         int count = 1;//declares count.
@@ -20,7 +19,6 @@ public class Main2 {
             else{
                 compressed+= arr[fullCount]+""+count;//if the next character is not equal, add the count of the
                 count = 1;
-                
             }
         }
         compressed+= arr[ext]+""+count;
@@ -49,7 +47,6 @@ public class Main2 {
         for(int i=0;i<chars.length;i++){
             curVal+=1;//increments by 1 every loop.
             if(i!=(chars.length-1)){//checks if it's not at the last, (-1 to account for point 0)
-
                 if(chars[i]!=chars[i+1]){//checks if not equal to next
                     System.out.println(chars[i]+", "+chars[i+1]+", "+(chars[i]==chars[i+1]));//debug check.
                     if(tarVal==0){//if tar val not set, set it as cur, then reset cur.
@@ -81,28 +78,31 @@ public class Main2 {
         else if(combine.contains(str2)){//concatinates to find if they are rotated.
             return true;
         }
-        else{//if concatination doesnt contain the string, then it isnt true.
+        else{//if concatination doesn't contain the string, then it isn't true.
             return false;
         }
    }
-    public static int findPeakIndex(int[] arr){
-
+    public static void findPeakIndex(int[] arr){
+        int track = 0;
+        int[] peak = new int[(arr.length/2)+1];
+        if(arr[0]>arr[1]){
+            peak[track]=arr[0];
+            track = 1;
+        }
+        for(int i = 1;i<(arr.length-2);i++){
+            if(arr[i-1]<arr[i]&&arr[i+1]<arr[i]){
+                peak[track]=arr[i];
+                track+=1;
+            }
+        }
+        if(arr[arr.length-1]>arr[arr.length-2]){
+            peak[track]=arr[arr.length-1];
+            track+=1;
+        }
+        for(int i = 0; i<track;i++){
+            System.out.println(peak[i]);
+        }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //givin space
     public static String wipe(String str){//cleans strings.
         str = str.toLowerCase();
         str = str.replaceAll("[^a-zA-Z0-9]", "");
