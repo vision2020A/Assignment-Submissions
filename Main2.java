@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class Main2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println(isEven(sc.next()));
+        System.out.println(isRotated(sc.next(), sc.next()));
     }
     public static String compressString(String str) {
         int count = 1;//declares count.
@@ -72,7 +72,38 @@ public class Main2 {
         bol = (curVal==tarVal);//final check to see if current=target
         return bol;//return result.
    }
-    public static String wipe(String str){
+   public static boolean isRotated(String str1, String str2){//"gone" -> "oneg" true, ong -> onge false
+        str1 = wipe(str1);
+        str2 = wipe(str2);
+        String combine = str1+str1;//makes a doubled version of original, gone->gonegone. Contains any variation of rotation.
+        if((str2.length())!=(str1.length())){return false;}//checks if they are the same length
+        else if(str2.equals(str1)){return true;}//checks if they are the same
+        else if(combine.contains(str2)){//concatinates to find if they are rotated.
+            return true;
+        }
+        else{//if concatination doesnt contain the string, then it isnt true.
+            return false;
+        }
+   }
+    public static int findPeakIndex(int[] arr){
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //givin space
+    public static String wipe(String str){//cleans strings.
         str = str.toLowerCase();
         str = str.replaceAll("[^a-zA-Z0-9]", "");
         return str;
