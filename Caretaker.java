@@ -13,4 +13,7 @@ public class Caretaker {
         }
         target.adj
     }
+    public void rest(){
+        energyLevel=100;
+    }
 }

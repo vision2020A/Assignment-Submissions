@@ -40,5 +40,8 @@ public class Pet {
     public String getStatus(){
         return (name+" - ["+species+"] - Hunger: "+hunger+"/100 | Happiness: "+happiness+"/100");
     }
-
+    public void groom(){
+        adjustStats(0,15);
+        System.out.println("Your "+species+", "+name+" Was groomed, and gained 15 happiness!");
+    }
 }
