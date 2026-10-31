@@ -16,4 +16,7 @@ public class Caretaker {
     public void rest(){
         energyLevel=100;
     }
+    public void cTime(){
+        energyLevel-=5;
+    }
 }

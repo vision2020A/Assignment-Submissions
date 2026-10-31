@@ -4,6 +4,7 @@
     <option name="disabledModuleNames">
       <set>
         <option value="Assignment-Submissions" />
+        <option value="SimplePetSim" />
       </set>
     </option>
   </component>
