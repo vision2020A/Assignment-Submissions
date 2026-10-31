@@ -34,8 +34,14 @@ public class Pet {
         System.out.println("Your "+species+" "+name+" ate a "+treatType+", and it had "+calorieBoost+" Calories!");
     }
     public void play(int minutes){
-        adjustStats(-minutes,minutes*2);
-        System.out.println("Your "+species+" "+name+" played for "+minutes+" minutes, and increased their happiness by "+minutes*2+" plus their hunger by -"+minutes+".");
+        if(minutes>0){
+            adjustStats(-minutes,minutes*2);
+            System.out.println("Your "+species+" "+name+" played for "+min utes+" minutes, and increased their happiness by "+minutes*2+" plus their hunger by -"+minutes+".");
+        }else{
+            System.out.println("You cant seriously bend time can you?\nPet isn't happy that you attempted to bend the laws of reality.\nDo you really want to erase the time you spent with your pet?? Messed up. -20 happyness.");
+            adjustStats(0,-20);
+        }
+
     }
     public String getStatus(){
         return (name+" - ["+species+"] - Hunger: "+hunger+"/100 | Happiness: "+happiness+"/100");

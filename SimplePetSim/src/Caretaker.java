@@ -10,8 +10,8 @@ public class Caretaker {
         }
         else{
             energyLevel-=15;
+            target.groom();
         }
-        target.adj
     }
     public void rest(){
         energyLevel=100;
